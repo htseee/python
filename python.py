@@ -91,3 +91,51 @@ D = 6
 E = 9
 print(A % D)
 print(A % E)
+
+red, green, blue = range(3)
+print(red, blue)
+L = [1, 2, 3, 4]
+while L:
+    front, L = L[0], L[1:]
+    print(front, L)
+L = [1, 2, 3, 4]
+while L:
+    front, *L = L
+    print(front, L)
+seq = [1, 2, 3, 4]
+a, *b = seq
+print(a)
+print(b)
+*a, b = seq
+print(a)
+print(b)
+a, *b, c = seq
+print(a)
+print(b)
+print(c)
+x = 'spam'
+y = 99
+z = ['eggs']
+print(x, y, z, sep='')
+print(x, y, z, sep=', ')
+print(x, y, z, end='')
+print(x, y, z, end=''); print(x, y, z)
+print(x, y, z, end='...\n')
+print(x, y, z, sep='...', end='!\n')
+print(x, y, z, sep='...', file=open('data.txt', 'w'))
+print(x, y, z)
+print(open('data.txt').read())
+log = open('log.txt', 'a')
+print(x, y, z, file=log)
+print(x, y, z)
+log = open('log.txt', 'w')
+print(1, 2, 3, file=log)
+print(4, 5, 6, file=log)
+log.close()
+print(7, 8, 9)
+print(open('log.txt').read())
+
+A = 't' if 'span' else 'f'
+print(A)
+A = 't' if '' else 'f'
+print(A)
