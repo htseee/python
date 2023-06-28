@@ -139,3 +139,22 @@ A = 't' if 'span' else 'f'
 print(A)
 A = 't' if '' else 'f'
 print(A)
+
+y = 13
+x = y // 2
+while x > 1:
+    if y % x == 0:
+        print(y, 'has factor', x)
+        break
+    x = x - 1
+else:
+    print(y, 'is prime')
+L1 = [1, 2, 3, 4]
+L2 = [5, 6, 7, 8]
+print(list(zip(L1, L2)))
+for (x, y) in zip(L1, L2):
+    print(x, y, '--', x + y)
+S = 'spam'
+for (offset, c) in enumerate(S):
+    print(c, 'appears at offset', offset)
+print([c * i for (i, c) in enumerate(S)])
